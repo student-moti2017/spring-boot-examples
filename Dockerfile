@@ -8,7 +8,7 @@ COPY docker/webapps/manager/META-INF/context.xml      /usr/local/tomcat/webapps/
 COPY docker/webapps/host-manager/META-INF/context.xml /usr/local/tomcat/webapps/host-manager/META-INF/context.xml
 
 #add the deployed app to the app web server
-COPY target/*.war                                     /usr/local/tomcat/webapps/
+COPY spring-boot-package-war/target/*.war                                     /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 EXPOSE 443
