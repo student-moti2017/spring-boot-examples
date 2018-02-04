@@ -8,7 +8,6 @@ COPY docker/webapps/manager/META-INF/context.xml      /usr/local/tomcat/webapps/
 COPY docker/webapps/host-manager/META-INF/context.xml /usr/local/tomcat/webapps/host-manager/META-INF/context.xml
 
 #add the deployed app to the app web server
-COPY hello-world.war                                  /usr/local/tomcat/webapps/
 COPY target/*.war                                     /usr/local/tomcat/webapps/
 
 EXPOSE 8080
