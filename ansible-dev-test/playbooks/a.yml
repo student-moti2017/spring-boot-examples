@@ -1,0 +1,9 @@
+---
+  - hosts: lb
+    become: true	#give sudo privilege
+    tasks:
+      - name: Install common tools on the master
+        apt:  name={{ item }} state=absent update_cache=yes
+        with_items:
+           - curl
+           - wget

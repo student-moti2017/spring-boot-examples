@@ -1,0 +1,14 @@
+[lb]
+host01
+
+[webservers]
+host02
+
+[databases]
+host03
+#kuku
+
+
+[control]
+ansible	ansible_connection=local
+

@@ -1,0 +1,37 @@
+---
+  - hosts: lb
+    become: true	#give sudo privilege
+    tasks:
+      - name: Ensure  nginx is stopped >
+        service: name=nginx state=stopped #enabled=yes
+
+#  - hosts: webservers
+#    become: true
+#    tasks:
+#      - name: Ensure webserver is down
+#        service: name=apache2 state=stopped
+
+#  - hosts: databases
+#    become: true
+#    tasks:
+#      - name: Ensure DB is restarted
+#        service: name=mysql state=restarted
+     
+      
+#  - hosts: webservers
+#    become: true
+#    tasks:
+#      - name: Ensure webserver is started again
+#        service: name=apache2 state=started
+
+#  - hosts: lb
+#    become: true        #give sudo privilege
+#    tasks:
+#      - name: Ensure  nginx is restarted >
+#        service: name=nginx state=started #enabled=yes
+
+#  - hosts: lb
+#    become: true	#give sudo privilege
+#    tasks:
+#      - name: Ensure  nginx is stopped >
+#        service: name=nginx state=stopped #enabled=yes

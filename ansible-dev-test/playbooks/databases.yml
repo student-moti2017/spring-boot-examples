@@ -1,0 +1,13 @@
+---
+  - hosts: databases
+    become: true	#give sudo privilege
+    tasks:
+      - name: Install mysql server >
+        apt: >
+             name=mysql-server 
+             state=present
+             update_cache=yes
+
+      - service: name=mysql state=started enabled=yes
+
+          
