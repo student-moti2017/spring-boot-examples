@@ -1,4 +1,4 @@
-FROM tomcat:latest
+FROM tomcat:alpine
 MAINTAINER Moti Abudi
 
 #Override the default tomcat conf files and set user credtials and allow managing from any host
